@@ -1,0 +1,34 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+        {
+            "name": "main",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/qrcodegen/cli.py"
+        },
+        {
+            "name": "profile",
+            "type": "python",
+            "request": "launch",
+            "module": "cProfile",
+            "args": [
+                "-s", "ncalls", "-m", "app"
+            ],
+            "jinja": true
+        },
+		{
+			"name": "unittest",
+			"type": "python",
+			"request": "launch",
+			"module": "pytest",
+			"args": [
+				"-v", "--capture=no", "--doctest-modules", "--pdb"
+			],
+			"jinja": true
+		}
+	]
+}
